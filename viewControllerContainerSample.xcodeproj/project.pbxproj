@@ -17,6 +17,10 @@
 		BF3798341E2F4E2F00806DA2 /* ContentAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3798311E2F4E2F00806DA2 /* ContentAViewController.swift */; };
 		BF3798351E2F4E2F00806DA2 /* ContentAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF3798321E2F4E2F00806DA2 /* ContentAViewController.xib */; };
 		BF3798361E2F4E2F00806DA2 /* ContentAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF3798321E2F4E2F00806DA2 /* ContentAViewController.xib */; };
+		BF3798391E2F514500806DA2 /* ContentBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3798371E2F514500806DA2 /* ContentBViewController.swift */; };
+		BF37983A1E2F514500806DA2 /* ContentBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3798371E2F514500806DA2 /* ContentBViewController.swift */; };
+		BF37983B1E2F514500806DA2 /* ContentBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF3798381E2F514500806DA2 /* ContentBViewController.xib */; };
+		BF37983C1E2F514500806DA2 /* ContentBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF3798381E2F514500806DA2 /* ContentBViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,8 @@
 		BF3798211E2F2F4A00806DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF3798311E2F4E2F00806DA2 /* ContentAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentAViewController.swift; sourceTree = "<group>"; };
 		BF3798321E2F4E2F00806DA2 /* ContentAViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentAViewController.xib; sourceTree = "<group>"; };
+		BF3798371E2F514500806DA2 /* ContentBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentBViewController.swift; sourceTree = "<group>"; };
+		BF3798381E2F514500806DA2 /* ContentBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentBViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,8 @@
 			children = (
 				BF3798311E2F4E2F00806DA2 /* ContentAViewController.swift */,
 				BF3798321E2F4E2F00806DA2 /* ContentAViewController.xib */,
+				BF3798371E2F514500806DA2 /* ContentBViewController.swift */,
+				BF3798381E2F514500806DA2 /* ContentBViewController.xib */,
 			);
 			name = Content;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF37983B1E2F514500806DA2 /* ContentBViewController.xib in Resources */,
 				BF3798151E2F2F4A00806DA2 /* LaunchScreen.storyboard in Resources */,
 				BF3798121E2F2F4A00806DA2 /* Assets.xcassets in Resources */,
 				BF3798351E2F4E2F00806DA2 /* ContentAViewController.xib in Resources */,
@@ -209,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF3798361E2F4E2F00806DA2 /* ContentAViewController.xib in Resources */,
+				BF37983C1E2F514500806DA2 /* ContentBViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +232,7 @@
 				BF37980D1E2F2F4A00806DA2 /* ViewController.swift in Sources */,
 				BF37980B1E2F2F4A00806DA2 /* AppDelegate.swift in Sources */,
 				BF3798331E2F4E2F00806DA2 /* ContentAViewController.swift in Sources */,
+				BF3798391E2F514500806DA2 /* ContentBViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +242,7 @@
 			files = (
 				BF3798341E2F4E2F00806DA2 /* ContentAViewController.swift in Sources */,
 				BF3798201E2F2F4A00806DA2 /* viewControllerContainerSampleTests.swift in Sources */,
+				BF37983A1E2F514500806DA2 /* ContentBViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

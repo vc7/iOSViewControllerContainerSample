@@ -1,5 +1,5 @@
 //
-//  ContentAViewController.swift
+//  ContentBViewController.swift
 //  viewControllerContainerSample
 //
 //  Created by vincent on 2017/01/18.
@@ -8,28 +8,28 @@
 
 import UIKit
 
-fileprivate let kContentACellIdentifier = "ContentACellIdentifier"
+fileprivate let kContentBCellIdentifier = "ContentBCellIdentifier"
 
-protocol ContentAViewControllerDelegate: NSObjectProtocol {
+protocol ContentBViewControllerDelegate: NSObjectProtocol {
     
     /// 選取第幾行
-    func contentAViewController(viewController: ContentAViewController, didSelectAtRow row: Int);
+    func contentBViewController(viewController: ContentBViewController, didSelectAtRow row: Int);
 }
 
-class ContentAViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    weak var delegate: ContentAViewControllerDelegate?
+class ContentBViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    weak var delegate: ContentBViewControllerDelegate?
     @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: kContentACellIdentifier)
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: kContentBCellIdentifier)
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,9 +43,9 @@ class ContentAViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: kContentACellIdentifier, for: indexPath) 
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: kContentBCellIdentifier, for: indexPath)
         
-        cell.textLabel?.text = "current row: (A) \(indexPath.row)"
+        cell.textLabel?.text = "current row: (B) \(indexPath.row)"
         
         return cell
     }
@@ -54,7 +54,7 @@ class ContentAViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        self.delegate?.contentAViewController(viewController: self, didSelectAtRow: indexPath.row)
+        self.delegate?.contentBViewController(viewController: self, didSelectAtRow: indexPath.row)
     }
     
 }
