@@ -27,8 +27,9 @@ class ViewController: UIViewController, ContentAViewControllerDelegate, ContentB
         let contentBView = self.contentBViewController.view!
         
         // 放入 top view container - A
-        self.contentAViewController.willMove(toParentViewController: self)
+        self.addChildViewController(self.contentAViewController)
         self.topViewContainer.addSubview(contentAView)
+        self.contentAViewController.didMove(toParentViewController: self)
         // Layout, 加入 constraints - A
         contentAView.translatesAutoresizingMaskIntoConstraints = false
         self.topViewContainer.addConstraints([
@@ -39,8 +40,9 @@ class ViewController: UIViewController, ContentAViewControllerDelegate, ContentB
             ])
         
         // 放入 bottom view container - B
-        self.contentBViewController.willMove(toParentViewController: self)
+        self.addChildViewController(self.contentBViewController)
         self.bottomViewContainer.addSubview(contentBView)
+        self.contentBViewController.didMove(toParentViewController: self)
         // Layout, 加入 constraints - B
         contentBView.translatesAutoresizingMaskIntoConstraints = false
         self.bottomViewContainer.addConstraints([

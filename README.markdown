@@ -16,19 +16,43 @@
 
 ### View Controller Hierarchy
 
-在加入 containers 之前，會有一個方法被呼叫：
+在 child view controller 的 view 被加入 container views 之前，會有一個方法被呼叫：
 
 ```
-willMove(toParentViewController:<#A Parent View Controller#>)
+addChildViewController(<#A Child View Controller#>)
 ```
 
-是因為在實作 parent-child view controller 的時候，如果沒有執行這行，會破壞 view controller 的層級關係 (Hierarchy)。
+這個 method 會在完成加入 child view controller 之後，自動呼叫 child view controller 的這個 method ：
 
-相對的，要移除這個 parent-child relationship 話，就必須要執行這個 method ：
-
+``` swift
+willMove(toParentViewController: <#A Parent View Controller#>)
 ```
+
+接著，把 view 加入 container 之後，可以讓 child view controller 執行這個 method ：
+
+``` swift
+didMove(toParentViewController: <#A Parent View Controller#>)
+```
+
+到這邊為止，才能說是完整。
+
+要這樣做是因為在實作 parent-child view controller 的時候，如果沒有執行這行，會讓 view controller 的層級關係 (Hierarchy) 和 view 的層級關係不一致。
+
+相對的，要移除這個 parent-child relationship 話，child view controller 就必須要執行這個 method ：
+
+``` swift
 removeFromParentViewController()
 ```
+
+接著把 view 移出 container 之後，一樣也要讓 child view controller 知道已經移出 parent view controller 了，這時候只要把 parent view controller 設定成 nil 即可：
+
+``` swift
+didMove(toParentViewController: nil)
+```
+
+⚠️ 兩段式的原因
+
+就可以在「加入」和「已加入完成」（及反向）之間，可以做到 view transitions ，或其他想要執行的商業邏輯。
 
 ### 手動加入 constraints
 
